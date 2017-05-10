@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The actual contents of the app activity -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="filmsoc.wscandroid.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/imgGal">
+
+            <include layout="@layout/activity_screen_slide"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/viewPagerRadioGroup"
+            android:clickable="false">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewPageButton1"
+                android:checked="true"
+                android:enabled="true"
+                android:clickable="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewPageButton2"
+                android:checked="false"
+                android:enabled="true"
+                android:clickable="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewPageButton3"
+                android:checked="false"
+                android:enabled="true"
+                android:clickable="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewPageButton4"
+                android:checked="false"
+                android:enabled="true"
+                android:clickable="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewPageButton5"
+                android:checked="false"
+                android:enabled="true"
+                android:clickable="false" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/homeInfo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/general_info"
+                android:id="@+id/textView2"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/nextFilmBannerGroup">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/nextfilm"
+                    android:id="@+id/nextFilmBannerText"
+                    android:layout_alignParentTop="true" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="*"
+                    android:layout_below="@+id/nextFilmBannerText"
+                    android:id="@+id/dateNextFilm">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Days"
+                            android:id="@+id/dayTitle"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Hours"
+                            android:id="@+id/hourTitle"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Minutes"
+                            android:id="@+id/minuteTitle"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Seconds"
+                            android:id="@+id/secondTitle"
+                            android:gravity="center" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="99"
+                            android:id="@+id/dayValue"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="99"
+                            android:id="@+id/hourValue"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="99"
+                            android:id="@+id/minuteValue"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="99"
+                            android:id="@+id/secondValue"
+                            android:gravity="center" />
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

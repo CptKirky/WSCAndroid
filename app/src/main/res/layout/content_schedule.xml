@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="filmsoc.wscandroid.ScheduleActivity"
+    tools:showIn="@layout/app_bar_schedule">
+
+    <ListView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fillViewport="false"
+        android:id="@+id/scheduleListView"
+        android:divider="@android:drawable/divider_horizontal_textfield"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:smoothScrollbar="true">
+    </ListView>
+
+</RelativeLayout>
+

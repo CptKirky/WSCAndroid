@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/allSelectableGroup">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_48dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_aboutUs"
+            android:icon="@drawable/ic_event_seat_black_48dp"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_today_black_48dp"
+            android:title="Schedule" />
+        <item
+            android:id="@+id/nav_getInvolved"
+            android:icon="@drawable/ic_assignment_ind_black_48dp"
+            android:title="Get Involved" />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_subdirectory_arrow_right_black_48dp"
+            android:title="Login" />
+
+        <item
+            android:id="@+id/nav_rota"
+            android:icon="@drawable/ic_video_library_black_48dp"
+            android:title="Rotas" />
+        <item
+            android:id="@+id/nav_showNum"
+            android:icon="@drawable/ic_assessment_black_48dp"
+            android:title="Show numbers" />
+        <item
+            android:id="@+id/nav_memEditors"
+            android:icon="@drawable/ic_assignment_black_48dp"
+            android:title="Members Editor" />
+        <item
+            android:id="@+id/nav_showStatus"
+            android:icon="@drawable/ic_theaters_black_48dp"
+            android:title="Show Status" />
+        <item
+            android:id="@+id/nav_social"
+            android:icon="@drawable/ic_group_black_48dp"
+            android:title="Socials" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_contacts_black_48dp"
+            android:title="Contacts" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_subdirectory_arrow_left_black_48dp"
+            android:title="Logout" />
+    </group>
+
+    <item android:title="Settings and help">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_48dp"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share_black_48dp"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_send_black_48dp"
+                android:title="Help and Feedback" />
+        </menu>
+    </item>
+</menu>

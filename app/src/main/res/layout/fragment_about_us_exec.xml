@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_president_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="President"
+            android:id="@+id/textView30"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_president_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_president_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView30"
+            android:layout_toEndOf="@+id/aboutUs_president_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_vicePres_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Vice-President"
+            android:id="@+id/textView31"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_vicePres_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_vicePres_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView31"
+            android:layout_toEndOf="@+id/aboutUs_vicePres_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_treasurer_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Treasurer"
+            android:id="@+id/textView32"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_treasurer_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_treasurer_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView32"
+            android:layout_toEndOf="@+id/aboutUs_treasurer_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_filmsOfficer_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Films Officer"
+            android:id="@+id/textView34"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_filmsOfficer_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_filmsOfficer_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView34"
+            android:layout_toEndOf="@+id/aboutUs_filmsOfficer_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_cp_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chief Projectionist"
+            android:id="@+id/textView33"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_cp_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_cp_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView33"
+            android:layout_toEndOf="@+id/aboutUs_cp_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_cdm_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chief Duty Manager"
+            android:id="@+id/textView36"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_cdm_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_cdm_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView36"
+            android:layout_toEndOf="@+id/aboutUs_cdm_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_publicity_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Publicity Officer"
+            android:id="@+id/textView38"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_publicity_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_publicity_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView38"
+            android:layout_toEndOf="@+id/aboutUs_publicity_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_marketing_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Marketing Officer"
+            android:id="@+id/textView40"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_marketing_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_marketing_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView40"
+            android:layout_toEndOf="@+id/aboutUs_marketing_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_itOfficer_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="IT Officer"
+            android:id="@+id/textView35"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_itOfficer_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_itOfficer_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView35"
+            android:layout_toEndOf="@+id/aboutUs_itOfficer_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_techOfficer_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Technical Officer"
+            android:id="@+id/textView39"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_techOfficer_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_techOfficer_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView39"
+            android:layout_toEndOf="@+id/aboutUs_techOfficer_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_eventsCoordinator_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Events &amp; Socials Coordinator"
+            android:id="@+id/textView42"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_eventsCoordinator_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_eventsCoordinator_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView42"
+            android:layout_toEndOf="@+id/aboutUs_eventsCoordinator_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutUs_chiefEditor_image"
+            android:background="#bdbdbd"
+            android:src="@mipmap/logo"
+            android:padding="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chief Editor"
+            android:id="@+id/textView44"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/aboutUs_chiefEditor_image"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/aboutUs_chiefEditor_text"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView44"
+            android:layout_toEndOf="@+id/aboutUs_chiefEditor_image"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+</LinearLayout>
