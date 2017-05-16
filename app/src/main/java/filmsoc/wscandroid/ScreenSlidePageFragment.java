@@ -32,12 +32,23 @@ public class ScreenSlidePageFragment extends Fragment {
     public ScreenSlidePageFragment() {
     }
 
+    /**
+     * This function creates the fragment for the screen slide
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPageNumber = getArguments().getInt(ARG_PAGE);
     }
 
+    /**
+     * This inflates the view into the container, and returns the appropriate view
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

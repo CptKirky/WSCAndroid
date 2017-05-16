@@ -8,12 +8,14 @@ import java.util.Calendar;
  * http://blog.mashape.com/list-of-40-tutorials-on-how-to-create-an-api/
  */
 public class UpdateManager {
-
+    /**
+     * This is a placeholder function to put in dummy data
+     */
     public static void setData() {
         //Temporary data
         Film[] tmpFilm = new Film[4];
         tmpFilm[0] = new Film(3376, "The Jungle Book");
-        tmpFilm[0].setYear(2016);
+        tmpFilm[0].setYear(2016); 
         tmpFilm[0].setRunTime(105);
         tmpFilm[0].setRating(Film.Rating.PG);
         tmpFilm[0].setDirector("Jon Favreau");
