@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
+/**
+ * This class is used to create the windows in the photo slideshow on teh front page.
+ */
 public class ScreenSlidePageFragment extends Fragment {
     /**
      * The argument key for the page number this fragment represents.
@@ -34,7 +38,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
     /**
      * This function creates the fragment for the screen slide
-     * @param savedInstanceState
+     * @param savedInstanceState This gives any data for the fragment
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,9 +48,9 @@ public class ScreenSlidePageFragment extends Fragment {
 
     /**
      * This inflates the view into the container, and returns the appropriate view
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
+     * @param inflater This inflates the view
+     * @param container This contains information about where teh view is being inflated to.
+     * @param savedInstanceState Thsi gives any data about the fragment
      * @return
      */
     @Override

@@ -26,9 +26,11 @@ public class Screening {
         private int noSold = 0;     //This is the number of this type of tickets sold at this particualr screening
 
         /**
-         *
-         * @param id
-         * @param price
+         * This creates a ticket that is valid for the show. A ticket must consist of an ID (to
+         * identify the ticket) and the price (as the ticket must have a cost). The ID and the
+         * ticket price cannot be less than 0, otherwise an exception is thrown.
+         * @param id The ID of the ticket - must be greater than or equal to 0. Othwerise, an InvalidParameterException is thrown
+         * @param price The price of the ticket (in pounds) - must be greather than or equal to 0. Otherwise, an InvalidParameterException is thrown.
          */
         public Ticket (int id, float price) {
             if (id < 0) {
@@ -43,48 +45,49 @@ public class Screening {
         }
 
         /**
-         *
-         * @return
+         * This returns the ticket ID.
+         * @return The ID
          */
         public int getID() {
             return this.id;
         }
 
         /**
-         *
-         * @return
+         * This returns the ticket price.
+         * @return The ticket price
          */
         public float getPrice(){
             return this.price;
         }
 
         /**
-         *
-         * @return
+         * This returns the number of this ticket sold.
+         * @return The number of tickets sold
          */
         public int getNoSold() {
             return this.noSold;
         }
 
         /**
-         *
-         * @return
+         * This returns the total takings for this ticket for this screening.
+         * @return The total takings (number sold * ticket price)
          */
         public float getTotalMade() {
             return this.price*this.noSold;
         }
 
         /**
-         *
-         * @param price
+         * This allows teh price to be modified.
+         * @param price The price of a ticket (in pounds)
          */
         public void setPrice(float price) {
             this.price = price;
         }
 
         /**
-         *
-         * @param noSold
+         * This sets the number of tickets for this screening has been sold. Should a number lower
+         * than 0 is given, the number of tickets sold is set to 0.
+         * @param noSold Number of tickets sold
          */
         public void setNoSold(int noSold) {
             if (noSold < 0) {
@@ -95,19 +98,20 @@ public class Screening {
         }
 
         /**
-         *
+         * This increments the number of tickets sold.
          */
         public void addTicket() {
             this.noSold = this.noSold+1;
         }
     }
-    private Ticket[] ticketsSold = null;
+    private Ticket[] ticketsSold = null;        //This stores an arrat of all the tickets for this screening
 
     /**
-     *
-     * @param id
-     * @param filmID
-     * @param time
+     * This constructs the screening object. An ID, filmID and the date & time of the screening is
+     * required. Should an invalid parameter be given, an InvalidParameterException is thrown.
+     * @param id This is the screening ID. If this is less than 0, then an InvalidParameterException will be thrown.
+     * @param filmID This is the film ID. If this is less than 0, then an InvalidParameterException will be thrown.
+     * @param time This is the date and time of the screening, stored as a Calender object. If this is null, an InvalidParameterException will be thrown.
      */
     public Screening(int id, int filmID, Calendar time) {
         if (id < 0 || filmID < 0 || time == null ) {

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
+ * This class manages the entire schedule, maintaining its ordering on addition of data.
+ *
  * Created by Richard on 09/06/2016.
  */
 public class ScheduleManager {

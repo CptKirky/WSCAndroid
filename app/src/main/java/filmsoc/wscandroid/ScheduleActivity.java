@@ -32,11 +32,11 @@ import java.security.InvalidParameterException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-/*
-    This class is the display class for the schedule activity. This holds all logic for DISPLAYING
-    the data. Most (if not all) processing is done within the ScheduleManager class. The activity
-    consists of a list of films, and a header allowing further films to be collected from the
-    ScheduleManager. This class SHOULD NOT talk directly to the UpdateManager
+/**
+ *  This class is the display class for the schedule activity. This holds all logic for DISPLAYING
+ *  the data. Most (if not all) processing is done within the ScheduleManager class. The activity
+ *  consists of a list of films, and a header allowing further films to be collected from the
+ *  ScheduleManager. This class SHOULD NOT talk directly to the UpdateManager
  */
 public class ScheduleActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,9 +49,10 @@ public class ScheduleActivity extends AppCompatActivity
     private Calendar headerDateAfter;       //The date by which the data retrieved by the header starts
     private Calendar headerDateBefore;      //The date by which the list retrieved by the header ends
 
-    /*
-        This function creates the initial visuals. It creates the action button, draws the
-        navigation window, and draws the list (including the header).
+    /**
+     *  This function creates the initial visuals. It creates the action button, draws the
+     *  navigation window, and draws the list (including the header).
+     * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,9 +164,9 @@ public class ScheduleActivity extends AppCompatActivity
         scheduleListView.addHeaderView(headerView);
     }
 
-    /*
-        This function is used mainly to debug, but modifies the navigation menu depending on if the
-        user has logged in or not
+    /**
+     *  This function is used mainly to debug, but modifies the navigation menu depending on if the
+     *  user has logged in or not
      */
     public void updateNavigationView() {
         navigationView.setNavigationItemSelectedListener(this);
@@ -236,8 +237,8 @@ public class ScheduleActivity extends AppCompatActivity
         }
     }
 
-    /*
-        This sets the correct back presses, depending on whether the navigation window is open
+    /**
+     *  This sets the correct back presses, depending on whether the navigation window is open
      */
     @Override
     public void onBackPressed() {
@@ -250,9 +251,11 @@ public class ScheduleActivity extends AppCompatActivity
     }
 
 
-    /*
-        This function controls the actions when a navigation window has been pressed. For the moment,
-        this also performs the login functions
+    /**
+     *  This function controls the actions when a navigation window has been pressed. For the moment,
+     *  this also performs the login functions
+     * @param item
+     * @return
      */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -295,10 +298,10 @@ public class ScheduleActivity extends AppCompatActivity
         return true;
     }
 
-    /*
-        This function is called when the activity is brought back from the dead. As such, a check is
-        done to update the navigation view, and the correct item is checked (although doesn't work
-        atm)
+    /**
+     *  This function is called when the activity is brought back from the dead. As such, a check is
+     *  done to update the navigation view, and the correct item is checked (although doesn't work
+     *  atm)
      */
     @Override
     protected void onResume() {
@@ -307,47 +310,51 @@ public class ScheduleActivity extends AppCompatActivity
         navigationView.setCheckedItem(R.id.nav_schedule);
     }
 
-    /*
-        This class manages the list of items in the list view. It not only manages the views and
-        ID's, but it allows for films to be added to the "visible schedule". This schedule is a
-        different version to the one found in the schedule manager, as each object is separated by
-        the day, not the film ID. For example, assume a film is being shown on 12/05 and 14/05. In
-         the schedule found in the ScheduleManager class, this would be within 1 entry, with the
-         "shown" attrribute having 2 entries. In the visible schedule, there would be 2 entries for
-         the film, each with one entry in the "shown" section. Another example is a film which as 2
-         showings on 12/05 and one showing on 14/05. In this case, it would exist as one entry in
-         the ScheduleManager class (as it is one film), and 2 entries in the visible schedule. The
-         entry for the 12/05 would have 2 entries in the "shown" attribute, and the entry for 14/05
-         would have 1 entry for the "shown" attribute.
+    /**
+     *  This class manages the list of items in the list view. It not only manages the views and
+     *  ID's, but it allows for films to be added to the "visible schedule". This schedule is a
+     *  different version to the one found in the schedule manager, as each object is separated by
+     *  the day, not the film ID. For example, assume a film is being shown on 12/05 and 14/05. In
+     *  the schedule found in the ScheduleManager class, this would be within 1 entry, with the
+     *  "shown" attrribute having 2 entries. In the visible schedule, there would be 2 entries for
+     *  the film, each with one entry in the "shown" section. Another example is a film which as 2
+     *  showings on 12/05 and one showing on 14/05. In this case, it would exist as one entry in
+     *  the ScheduleManager class (as it is one film), and 2 entries in the visible schedule. The
+     *  entry for the 12/05 would have 2 entries in the "shown" attribute, and the entry for 14/05
+     *  would have 1 entry for the "shown" attribute.
 
-         The list is ordered by the day, then the time. In a case where 2 films have the same date
-         and time, then the order is detemined by there position in the ScheduleManager
+     *  The list is ordered by the day, then the time. In a case where 2 films have the same date
+     *  and time, then the order is detemined by there position in the ScheduleManager
      */
     private class ScheduleAdapter extends BaseAdapter {
         private Film[] visibleSchedule; //This stores all the entries shown to the user
         private Context context;        //This stores a copy of the context used in the activity
 
-        /*
-            This function sets up the activity by getting any upcoming screenings known to the
-            ScheduleManager, and set the context (needed for creating views)
+        /**
+         *  This function sets up the activity by getting any upcoming screenings known to the
+         *  ScheduleManager, and set the context (needed for creating views)
+         * @param context
          */
         public ScheduleAdapter(Context context) {
             visibleSchedule = ScheduleManager.splitScreenings(ScheduleManager.getFilmsAfter(Calendar.getInstance()));
             this.context = context;
         }
 
-        /*
-            This function returns the number of items in the list. If there are no films, then 1 is
-            returned (as the "no show" element counts :P )
+        /**
+         *  This function returns the number of items in the list. If there are no films, then 1 is
+         *  returned (as the "no show" element counts :P )
+         * @return
          */
         @Override
         public int getCount() {
             return Math.max(visibleSchedule.length, 1);
         }
 
-        /*
-            This function gets the film object at a particular position. If there are no films being
-            shown in the list, then null is returned
+        /**
+         *  This function gets the film object at a particular position. If there are no films being
+         *  shown in the list, then null is returned
+         * @param position
+         * @return
          */
         @Override
         public Object getItem(int position) {
@@ -358,9 +365,11 @@ public class ScheduleActivity extends AppCompatActivity
             }
         }
 
-        /*
-            This function gets the ID of the selected film. If there are no films being shown, then
-            -1 is returned
+        /**
+         *  This function gets the ID of the selected film. If there are no films being shown, then
+         *  -1 is returned
+         * @param position
+         * @return
          */
         @Override
         public long getItemId(int position) {
@@ -371,9 +380,13 @@ public class ScheduleActivity extends AppCompatActivity
             }
         }
 
-        /*
-            This function returns the view to be placed in a given position. This is dependent on
-            whether there is a view in the visible schedule, and the position of the click/tap.
+        /**
+         *  This function returns the view to be placed in a given position. This is dependent on
+         *  whether there is a view in the visible schedule, and the position of the click/tap.
+         * @param position
+         * @param convertView
+         * @param parent
+         * @return
          */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -442,9 +455,11 @@ public class ScheduleActivity extends AppCompatActivity
             return result;
         }
 
-        /*
-            This function controls the addition to films to the visible schedule. These are usually
-            between 2 dates.
+        /**
+         *  This function controls the addition to films to the visible schedule. These are usually
+         *  between 2 dates.
+         * @param beforeDate
+         * @param afterDate
          */
         public void addFilms(Calendar beforeDate, Calendar afterDate) {
             //If no before date, assume now
