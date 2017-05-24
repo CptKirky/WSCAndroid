@@ -52,7 +52,7 @@ public class ScheduleActivity extends AppCompatActivity
     /**
      *  This function creates the initial visuals. It creates the action button, draws the
      *  navigation window, and draws the list (including the header).
-     * @param savedInstanceState
+     * @param savedInstanceState This is the core data on the state of the program
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -254,8 +254,8 @@ public class ScheduleActivity extends AppCompatActivity
     /**
      *  This function controls the actions when a navigation window has been pressed. For the moment,
      *  this also performs the login functions
-     * @param item
-     * @return
+     * @param item This is the menu item which has been clicked on
+     * @return This returns true if executed correctly
      */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -333,7 +333,7 @@ public class ScheduleActivity extends AppCompatActivity
         /**
          *  This function sets up the activity by getting any upcoming screenings known to the
          *  ScheduleManager, and set the context (needed for creating views)
-         * @param context
+         * @param context This is the current context of the app
          */
         public ScheduleAdapter(Context context) {
             visibleSchedule = ScheduleManager.splitScreenings(ScheduleManager.getFilmsAfter(Calendar.getInstance()));
@@ -343,7 +343,7 @@ public class ScheduleActivity extends AppCompatActivity
         /**
          *  This function returns the number of items in the list. If there are no films, then 1 is
          *  returned (as the "no show" element counts :P )
-         * @return
+         * @return This returns the number of items in teh list (1 is min, as the no show counts as 1)
          */
         @Override
         public int getCount() {
@@ -353,8 +353,8 @@ public class ScheduleActivity extends AppCompatActivity
         /**
          *  This function gets the film object at a particular position. If there are no films being
          *  shown in the list, then null is returned
-         * @param position
-         * @return
+         * @param position This is the position ID of the item
+         * @return The object at the position of the list. If the list is empty, null is returned.
          */
         @Override
         public Object getItem(int position) {
@@ -368,8 +368,8 @@ public class ScheduleActivity extends AppCompatActivity
         /**
          *  This function gets the ID of the selected film. If there are no films being shown, then
          *  -1 is returned
-         * @param position
-         * @return
+         * @param position This the position ID of the item
+         * @return The ID number of the item. Should the list be emty, then -1 is returned
          */
         @Override
         public long getItemId(int position) {
@@ -383,10 +383,10 @@ public class ScheduleActivity extends AppCompatActivity
         /**
          *  This function returns the view to be placed in a given position. This is dependent on
          *  whether there is a view in the visible schedule, and the position of the click/tap.
-         * @param position
-         * @param convertView
-         * @param parent
-         * @return
+         * @param position This is the position ID of the item
+         * @param convertView This is not used...
+         * @param parent This is the parent view for the list. It is not used...
+         * @return The returns an approprate view, containf all teh film details. This includes an appropriate view if the list is empty
          */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -457,9 +457,10 @@ public class ScheduleActivity extends AppCompatActivity
 
         /**
          *  This function controls the addition to films to the visible schedule. These are usually
-         *  between 2 dates.
-         * @param beforeDate
-         * @param afterDate
+         *  between 2 dates. Should the dates be given in the wrong order, the function will switch
+         *  it around.
+         * @param beforeDate This is the date before. If "null" is passed, it is assumed to be now.
+         * @param afterDate This is the date after .
          */
         public void addFilms(Calendar beforeDate, Calendar afterDate) {
             //If no before date, assume now

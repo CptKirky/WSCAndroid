@@ -50,8 +50,8 @@ public class ScreenSlidePageFragment extends Fragment {
      * This inflates the view into the container, and returns the appropriate view
      * @param inflater This inflates the view
      * @param container This contains information about where teh view is being inflated to.
-     * @param savedInstanceState Thsi gives any data about the fragment
-     * @return
+     * @param savedInstanceState This gives any data about the fragment
+     * @return This returns the view
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

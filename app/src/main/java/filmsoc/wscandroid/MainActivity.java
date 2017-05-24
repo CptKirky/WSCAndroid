@@ -44,11 +44,11 @@ import android.widget.TextView;
 //TODO: create share action (somehow...)
 //TODO: create help action (somehow...)
 
-/*
-    This class is the display class for the home screen. On this page, a film banner is at the top of
-    the page (info updates in a class inside this class, and updated via updateManager). As well as
-    this, next film, (and if logged in) next steward, proj and/or DM shows will appear at the bottom.
-    If extended, favourited films will also appear here.
+/**
+ *  This class is the display class for the home screen. On this page, a film banner is at the top of
+ *  the page (info updates in a class inside this class, and updated via updateManager). As well as
+ *  this, next film, (and if logged in) next steward, proj and/or DM shows will appear at the bottom.
+ *  If extended, favourited films will also appear here.
  */
 
 public class MainActivity extends AppCompatActivity
